@@ -16,9 +16,14 @@ asset InternshipContract extends AccordContract {
   o String internshipPosition
   o DateTime internshipStartDate
   o DateTime internshipEndDate
-  o DateTime partTimeDuration
+  o InternshipDuration partTimeDuration
   o MonetaryAmount partTimeStipend
-  o DateTime fullTimeDuration
+  o InternshipDuration fullTimeDuration
   o MonetaryAmount fullTimeStipend
   o DateTime offerExpirationDate
+}
+
+concept InternshipDuration{
+  o Duration workingHours
+  o Duration workingDays
 }

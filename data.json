@@ -1,23 +1,47 @@
 {
     "$class": "org.apan.accordinternshipcontract.InternshipContract",
     "companyName" : "E Corp",
-    "offerDate" : "2018-01-01T00:00:00.000+05:30",
+    "offerDate" : "2020-12-08T00:00:00.000+05:30",
     "applicantName" : "Elliot Alderson",
     "internshipPosition" : "Software Developer Intern",
-    "internshipStartDate" : "2018-01-01T00:00:00.000+05:30",
-    "internshipEndDate" : "2018-01-01T00:00:00.000+05:30",
-    "partTimeDuration" : "2018-01-01T00:00:00.000+05:30",
+    "internshipStartDate" : "2020-12-09T00:00:00.000+05:30",
+    "internshipEndDate" : "2020-01-09T00:00:00.000+05:30",
+    "partTimeDuration" : {
+        "$class": "org.apan.accordinternshipcontract.InternshipDuration",
+        "workingHours" : {
+            "$class": "org.accordproject.time.Duration",
+            "amount": 4,
+            "unit": "hours"
+        },
+        "workingDays" : {
+            "$class": "org.accordproject.time.Duration",
+            "amount": 5,
+            "unit": "days"
+        }
+    },
     "partTimeStipend" : {
         "$class": "org.accordproject.money.MonetaryAmount",
         "doubleValue": 15000,
         "currencyCode": "INR"
     },
-    "fullTimeDuration" : "2018-01-01T00:00:00.000+05:30",
+    "fullTimeDuration" : {
+        "$class": "org.apan.accordinternshipcontract.InternshipDuration",
+        "workingHours" : {
+            "$class": "org.accordproject.time.Duration",
+            "amount": 8,
+            "unit": "hours"
+        },
+        "workingDays" : {
+            "$class": "org.accordproject.time.Duration",
+            "amount": 5,
+            "unit": "days"
+        }
+    },
     "fullTimeStipend" : {
         "$class": "org.accordproject.money.MonetaryAmount",
         "doubleValue": 25000,
         "currencyCode": "INR"
     },
-    "offerExpirationDate" : "2018-01-01T00:00:00.000+05:30",
+    "offerExpirationDate" : "2020-12-09T16:00:00.000+05:30",
     "contractId": "78ae8d24-7cf4-4aa5-9089-404dd31c1e6e"
   }
