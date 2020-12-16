@@ -1,0 +1,24 @@
+namespace org.apan.accordinternshipcontract
+
+import org.accordproject.cicero.contract.* from https://models.accordproject.org/cicero/contract.cto
+import org.accordproject.cicero.runtime.* from https://models.accordproject.org/cicero/runtime.cto
+import org.accordproject.time.* from https://models.accordproject.org/v2.0/time.cto
+import org.accordproject.address.* from https://models.accordproject.org/address.cto
+import org.accordproject.money.* from https://models.accordproject.org/money.cto
+
+/**
+ * The model for the contract
+ */
+asset InternshipContract extends AccordContract {
+  o String companyName
+  o DateTime offerDate
+  o String applicantName
+  o String internshipPosition
+  o DateTime internshipStartDate
+  o DateTime internshipEndDate
+  o DateTime partTimeDuration
+  o MonetaryAmount partTimeStipend
+  o DateTime fullTimeDuration
+  o MonetaryAmount fullTimeStipend
+  o DateTime offerExpirationDate
+}

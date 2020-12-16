@@ -2,6 +2,11 @@
   "name": "accordinternshipcontract",
   "version": "1.0.0",
   "description": "Sample Internship Contract",
+  "accordproject": {
+    "template": "contract",
+    "cicero": "^0.21.9",
+    "runtime": "ergo"
+  },
   "scripts": {
     "test": "cucumber-js test -r .cucumber.js"
   },
