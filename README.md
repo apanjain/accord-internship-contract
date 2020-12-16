@@ -1,6 +1,6 @@
 [![accord project](https://img.shields.io/badge/powered%20by-accord%20project-19C6C8.svg)](https://www.accordproject.org/)
 
-# Accord Project Demo
+# Accord Internship Contract
  This is a sample accord template for internship contracts.
 
 ## Setup
