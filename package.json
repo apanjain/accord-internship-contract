@@ -1,0 +1,14 @@
+{
+  "name": "accordinternshipcontract",
+  "version": "1.0.0",
+  "description": "Sample Internship Contract",
+  "scripts": {
+    "test": "cucumber-js test -r .cucumber.js"
+  },
+  "author": "Apan Jain",
+  "license": "ISC",
+  "devDependencies": {
+    "@accordproject/cicero-cli": "^0.21.9",
+    "chai": "^4.2.0"
+  }
+}
