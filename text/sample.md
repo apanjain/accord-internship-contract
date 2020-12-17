@@ -13,14 +13,9 @@ If you accept this offer, your full-time internship work will start on December 
 
 {{#clause responsibilitiesClause}}
 ### Responsibilities
-
-\
-"Develop Mobile Apps (Android) using React Native, and Java Languages."\
-,\
-"Develop Backend Apps using Javascript, Java."\
-,\
-"Follow and Adopt Personal Software Process Guidelines and IEEE Software Engineering Code of Ethics and Professional Practice for Daily Work and Track Tasks on Gitlab with daily 15 minutes of the time."\
-
+1. {{%Develop Mobile Apps (Android) using React Native, and Java Languages.%}}
+2. {{%Develop Backend Apps using Javascript, Java.%}}
+3. {{%Follow and Adopt Personal Software Process Guidelines and IEEE Software Engineering Code of Ethics and Professional Practice for Daily Work and Track Tasks on Gitlab with daily 15 minutes of the time.%}}
 {{/clause}}
 
 {{#clause cashCompensationClause}}

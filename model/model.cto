@@ -36,7 +36,7 @@ asset CashCompensationClause extends AccordClause{
 }
 
 asset ResponsibilitiesClause extends AccordClause{
-  o ResponsibilityItem[] responsibilities
+  o String[] responsibilities
 }
 
 asset ProprietaryInformationClause extends AccordClause{
@@ -51,8 +51,4 @@ asset OfferExpirationClause extends AccordClause{
 concept InternshipDuration{
   o Duration workingHours
   o Duration workingDays
-}
-
-concept ResponsibilityItem {
-  o String responsibility
 }

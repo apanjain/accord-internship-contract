@@ -12,9 +12,9 @@ If you accept this offer, your full-time internship work will start on {{interns
   
 {{#clause responsibilitiesClause}}  
 ### Responsibilities  
-{{#join responsibilities}}  
-    {{responsibility}}  
-{{/join}}  
+1. {{%responsibilitiesClause.responsibilities[0]%}}
+2. {{%responsibilitiesClause.responsibilities[1]%}}
+3. {{%responsibilitiesClause.responsibilities[2]%}}
 {{/clause}}  
   
 {{#clause cashCompensationClause}}
