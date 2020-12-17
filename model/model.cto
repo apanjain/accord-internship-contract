@@ -21,9 +21,14 @@ asset InternshipContract extends AccordContract {
   o InternshipDuration fullTimeDuration
   o MonetaryAmount fullTimeStipend
   o DateTime offerExpirationDate
+  o ResponsibilityList[] responsibilities
 }
 
 concept InternshipDuration{
   o Duration workingHours
   o Duration workingDays
+}
+
+concept ResponsibilityList {
+  o String responsibility
 }

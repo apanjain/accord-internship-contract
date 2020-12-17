@@ -8,7 +8,10 @@ We’re delighted to offer for Internship position of {{internshipPosition}} wit
   
 If you accept this offer, your full-time internship work will start on {{internshipStartDate  as "MMMM DD YYYY"}} and ends on {{internshipEndDate  as "MMMM DD YYYY"}}  
   
-### Responsibilities
+### Responsibilities  
+{{#olist responsibilities}}
+{{responsibility}}
+{{/olist}}
   
 ### Cash Compensation and Other Benefits.  
 The Company will pay you {{fullTimeStipend as "K 0,0.00"}} for Full-time ({{%fullTimeDuration.workingHours%}} per day, {{%fullTimeDuration.workingDays%}} a week) and {{partTimeStipend as "K 0,0.00"}} for part-time (minimum {{%partTimeDuration.workingHours%}} per day, {{%partTimeDuration.workingDays%}} a week)  

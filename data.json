@@ -42,6 +42,18 @@
         "doubleValue": 25000,
         "currencyCode": "INR"
     },
+    "responsibilities" : [{
+        "$class" : "org.apan.accordinternshipcontract.ResponsibilityList",
+        "responsibility" : "Develop Mobile Apps (Android) using React Native, and Java Languages."
+    },
+    {
+        "$class" : "org.apan.accordinternshipcontract.ResponsibilityList",
+        "responsibility" :  "Develop Backend Apps using Javascript, Java."
+    },
+    {
+        "$class" : "org.apan.accordinternshipcontract.ResponsibilityList",
+        "responsibility" : "Follow and Adopt Personal Software Process Guidelines and IEEE Software Engineering Code of Ethics and Professional Practice for Daily Work and Track Tasks on Gitlab with daily 15 minutes of the time."
+    }],
     "offerExpirationDate" : "2020-12-09T16:00:00.000+05:30",
     "contractId": "78ae8d24-7cf4-4aa5-9089-404dd31c1e6e"
   }
