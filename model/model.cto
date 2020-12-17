@@ -12,16 +12,40 @@ import org.accordproject.money.* from https://models.accordproject.org/money.cto
 asset InternshipContract extends AccordContract {
   o String companyName
   o DateTime offerDate
+  o OfferClause offerClause
+  o CashCompensationClause cashCompensationClause
+  o ResponsibilitiesClause responsibilitiesClause
+  o ProprietaryInformationClause proprietaryInformationClause
+  o OfferExpirationClause offerExpirationClause
+}
+
+
+asset OfferClause extends AccordClause{
   o String applicantName
   o String internshipPosition
+  o String companyName
   o DateTime internshipStartDate
   o DateTime internshipEndDate
+}
+
+asset CashCompensationClause extends AccordClause{
   o InternshipDuration partTimeDuration
-  o MonetaryAmount partTimeStipend
   o InternshipDuration fullTimeDuration
+  o MonetaryAmount partTimeStipend
   o MonetaryAmount fullTimeStipend
+}
+
+asset ResponsibilitiesClause extends AccordClause{
+  o ResponsibilityItem[] responsibilities
+}
+
+asset ProprietaryInformationClause extends AccordClause{
+
+}
+
+asset OfferExpirationClause extends AccordClause{
   o DateTime offerExpirationDate
-  o ResponsibilityList[] responsibilities
+  o String companyName
 }
 
 concept InternshipDuration{
@@ -29,6 +53,6 @@ concept InternshipDuration{
   o Duration workingDays
 }
 
-concept ResponsibilityList {
+concept ResponsibilityItem {
   o String responsibility
 }

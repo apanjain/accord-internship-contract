@@ -1,59 +1,81 @@
 {
     "$class": "org.apan.accordinternshipcontract.InternshipContract",
-    "companyName" : "E Corp",
-    "offerDate" : "2020-12-08T00:00:00.000+05:30",
-    "applicantName" : "Elliot Alderson",
-    "internshipPosition" : "Software Developer Intern",
-    "internshipStartDate" : "2020-12-09T00:00:00.000+05:30",
-    "internshipEndDate" : "2020-01-09T00:00:00.000+05:30",
-    "partTimeDuration" : {
-        "$class": "org.apan.accordinternshipcontract.InternshipDuration",
-        "workingHours" : {
-            "$class": "org.accordproject.time.Duration",
-            "amount": 4,
-            "unit": "hours"
+    "companyName": "E Corp",
+    "offerDate": "2020-12-08T00:00:00.000+05:30",
+    "offerClause": {
+        "$class": "org.apan.accordinternshipcontract.OfferClause",
+        "applicantName": "Elliot Alderson",
+        "companyName": "E Corp",
+        "internshipPosition": "Software Developer Intern",
+        "internshipStartDate": "2020-12-09T00:00:00.000+05:30",
+        "internshipEndDate": "2020-01-09T00:00:00.000+05:30",
+        "clauseId": "78ae8d24-7cf4-4aa5-9089-404dd31c1e6f"
+    },
+    "cashCompensationClause":{
+        "$class": "org.apan.accordinternshipcontract.CashCompensationClause",
+        "partTimeDuration": {
+            "$class": "org.apan.accordinternshipcontract.InternshipDuration",
+            "workingHours": {
+                "$class": "org.accordproject.time.Duration",
+                "amount": 4,
+                "unit": "hours"
+            },
+            "workingDays": {
+                "$class": "org.accordproject.time.Duration",
+                "amount": 5,
+                "unit": "days"
+            }
         },
-        "workingDays" : {
-            "$class": "org.accordproject.time.Duration",
-            "amount": 5,
-            "unit": "days"
-        }
-    },
-    "partTimeStipend" : {
-        "$class": "org.accordproject.money.MonetaryAmount",
-        "doubleValue": 15000,
-        "currencyCode": "INR"
-    },
-    "fullTimeDuration" : {
-        "$class": "org.apan.accordinternshipcontract.InternshipDuration",
-        "workingHours" : {
-            "$class": "org.accordproject.time.Duration",
-            "amount": 8,
-            "unit": "hours"
+        "partTimeStipend": {
+            "$class": "org.accordproject.money.MonetaryAmount",
+            "doubleValue": 15000,
+            "currencyCode": "INR"
         },
-        "workingDays" : {
-            "$class": "org.accordproject.time.Duration",
-            "amount": 5,
-            "unit": "days"
-        }
+        "fullTimeDuration": {
+            "$class": "org.apan.accordinternshipcontract.InternshipDuration",
+            "workingHours": {
+                "$class": "org.accordproject.time.Duration",
+                "amount": 8,
+                "unit": "hours"
+            },
+            "workingDays": {
+                "$class": "org.accordproject.time.Duration",
+                "amount": 5,
+                "unit": "days"
+            }
+        },
+        "fullTimeStipend": {
+            "$class": "org.accordproject.money.MonetaryAmount",
+            "doubleValue": 25000,
+            "currencyCode": "INR"
+        },
+        "clauseId": "78ae8d24-7cf4-4aa5-9089-404dd31c1e6g"
     },
-    "fullTimeStipend" : {
-        "$class": "org.accordproject.money.MonetaryAmount",
-        "doubleValue": 25000,
-        "currencyCode": "INR"
+    "responsibilitiesClause": {
+        "$class": "org.apan.accordinternshipcontract.ResponsibilitiesClause",
+        "responsibilities": [{
+            "$class": "org.apan.accordinternshipcontract.ResponsibilityItem",
+            "responsibility": "Develop Mobile Apps (Android) using React Native, and Java Languages."
+        },
+        {
+            "$class": "org.apan.accordinternshipcontract.ResponsibilityItem",
+            "responsibility":  "Develop Backend Apps using Javascript, Java."
+        },
+        {
+            "$class": "org.apan.accordinternshipcontract.ResponsibilityItem",
+            "responsibility": "Follow and Adopt Personal Software Process Guidelines and IEEE Software Engineering Code of Ethics and Professional Practice for Daily Work and Track Tasks on Gitlab with daily 15 minutes of the time."
+        }],
+        "clauseId": "78ae8d24-7cf4-4aa5-9089-404dd31c1e6h"
     },
-    "responsibilities" : [{
-        "$class" : "org.apan.accordinternshipcontract.ResponsibilityList",
-        "responsibility" : "Develop Mobile Apps (Android) using React Native, and Java Languages."
+    "proprietaryInformationClause": {
+        "$class": "org.apan.accordinternshipcontract.ProprietaryInformationClause",
+        "clauseId": "78ae8d24-7cf4-4aa5-9089-404dd31c1e6i"
     },
-    {
-        "$class" : "org.apan.accordinternshipcontract.ResponsibilityList",
-        "responsibility" :  "Develop Backend Apps using Javascript, Java."
+    "offerExpirationClause": {
+        "$class": "org.apan.accordinternshipcontract.OfferExpirationClause",
+        "offerExpirationDate": "2020-12-09T16:00:00.000+05:30",
+        "companyName": "E Corp",
+        "clauseId": "78ae8d24-7cf4-4aa5-9089-404dd31c1e6j"
     },
-    {
-        "$class" : "org.apan.accordinternshipcontract.ResponsibilityList",
-        "responsibility" : "Follow and Adopt Personal Software Process Guidelines and IEEE Software Engineering Code of Ethics and Professional Practice for Daily Work and Track Tasks on Gitlab with daily 15 minutes of the time."
-    }],
-    "offerExpirationDate" : "2020-12-09T16:00:00.000+05:30",
     "contractId": "78ae8d24-7cf4-4aa5-9089-404dd31c1e6e"
-  }
+    }
