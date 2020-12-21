@@ -44,6 +44,14 @@ sudo apt-get install asciidoctor
 ```
 - Generate html document
 ```sh
-asciidoctor Report.adoc
+asciidoctor -r asciidoctor-diagram Report.adoc
 ```
 - This will generate a Report.html file which can be opened using a browser.
+- If you face an issues saying   
+`
+java.io.IOException: Cannot run program "/opt/local/bin/dot": error=2, No such file or directory
+`  
+Then [Install Graphviz](https://plantuml.com/graphviz-dot)
+```sh
+sudo apt install graphviz 
+```

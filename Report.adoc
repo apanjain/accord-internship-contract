@@ -29,7 +29,59 @@ On the logic part there are no functions as the basic requirements for the proje
 
 
 // Add a diagram to explain the structure using mermaid-js
+[plantuml, contractStructure, svg]
+....
+@startuml
+class org.apan.accordinternshipcontract.InternshipContract << (A,green) >> {
+  + String companyName
+  + DateTime offerDate
+  + OfferClause offerClause
+  + CashCompensationClause cashCompensationClause
+  + ResponsibilitiesClause responsibilitiesClause
+  + ProprietaryInformationClause proprietaryInformationClause
+  + OfferExpirationClause offerExpirationClause
+}
 
+class org.apan.accordinternshipcontract.OfferClause << (A,green) >> {
+  + String applicantName
+  + String internshipPosition
+  + String companyName
+  + DateTime internshipStartDate
+  + DateTime internshipEndDate
+}
+
+class org.apan.accordinternshipcontract.CashCompensationClause << (A,green) >> {
+  + InternshipDuration partTimeDuration
+  + InternshipDuration fullTimeDuration
+  + MonetaryAmount partTimeStipend
+  + MonetaryAmount fullTimeStipend
+}
+
+class org.apan.accordinternshipcontract.ResponsibilitiesClause << (A,green) >> {
+  + String[] responsibilities
+}
+
+class org.apan.accordinternshipcontract.ProprietaryInformationClause << (A,green) >> {
+}
+
+class org.apan.accordinternshipcontract.OfferExpirationClause << (A,green) >> {
+  + DateTime offerExpirationDate
+  + String companyName
+}
+
+class org.apan.accordinternshipcontract.InternshipDuration << (C,pink) >> {
+  + Duration workingHours
+  + Duration workingDays
+}
+
+org.apan.accordinternshipcontract.InternshipContract --|> org.accordproject.cicero.contract.AccordContract
+org.apan.accordinternshipcontract.OfferClause --|> org.accordproject.cicero.contract.AccordClause
+org.apan.accordinternshipcontract.CashCompensationClause --|> org.accordproject.cicero.contract.AccordClause
+org.apan.accordinternshipcontract.ResponsibilitiesClause --|> org.accordproject.cicero.contract.AccordClause
+org.apan.accordinternshipcontract.ProprietaryInformationClause --|> org.accordproject.cicero.contract.AccordClause
+org.apan.accordinternshipcontract.OfferExpirationClause --|> org.accordproject.cicero.contract.AccordClause
+@enduml
+....
 == Plan
 
 - To create a sample internship contract.
