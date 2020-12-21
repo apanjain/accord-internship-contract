@@ -29,7 +29,51 @@ On the logic part there are no functions as the basic requirements for the proje
 
 
 // Add a diagram to explain the structure using mermaid-js
-
+[mermaid, contractStructure, png]
+....
+classDiagram
+    class InternshipDuration {
+      + Duration workingHours
+      + Duration workingDays
+    }
+    class OfferExpirationClause {
+      + DateTime offerExpirationDate
+      + String companyName
+    }
+    class ProprietaryInformationClause {
+    }
+    class ResponsibilitiesClause {
+      + String[] responsibilities
+    }
+    class CashCompensationClause {
+      + InternshipDuration partTimeDuration
+      + InternshipDuration fullTimeDuration
+      + MonetaryAmount partTimeStipend
+      + MonetaryAmount fullTimeStipend
+    }
+    class OfferClause {
+      + String applicantName
+      + String internshipPosition
+      + String companyName
+      + DateTime internshipStartDate
+      + DateTime internshipEndDate
+    }
+    class InternshipContract {
+      + String companyName
+      + DateTime offerDate
+      + OfferClause offerClause
+      + CashCompensationClause cashCompensationClause
+      + ResponsibilitiesClause responsibilitiesClause
+      + ProprietaryInformationClause proprietaryInformationClause
+      + OfferExpirationClause offerExpirationClause
+    }
+    InternshipContract --|> AccordContract
+    OfferClause --|> AccordClause
+    CashCompensationClause --|> AccordClause
+    ResponsibilitiesClause --|> AccordClause
+    ProprietaryInformationClause --|> AccordClause
+    OfferExpirationClause --|> AccordClause
+....
 == Plan
 
 - To create a sample internship contract.

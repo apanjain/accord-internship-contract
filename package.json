@@ -14,6 +14,7 @@
   "license": "ISC",
   "devDependencies": {
     "@accordproject/cicero-cli": "^0.21.9",
+    "@mermaid-js/mermaid-cli": "^8.8.4",
     "chai": "^4.2.0"
   }
 }
