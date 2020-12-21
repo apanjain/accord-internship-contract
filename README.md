@@ -42,8 +42,12 @@ npx cicero parse --output data.json
 ```sh
 sudo apt-get install asciidoctor
 ```
+- Install AsciiDoctor Diagram
+```sh
+gem install asciidoctor-diagram
+```
 - Generate html document
 ```sh
-asciidoctor Report.adoc
+asciidoctor -a mmdc=node_modules/.bin/mmdc -r asciidoctor-diagram Report.adoc
 ```
 - This will generate a Report.html file which can be opened using a browser.
