@@ -34,3 +34,16 @@ npx cicero parse --output data.json
   ```shell
   npx cicero draft --output text/sample.md
   ```
+## Documentation
+
+- The report on this project is generated using AsciiDoctor
+- Install [AsciiDoctor](https://asciidoctor.org/docs/user-manual/#installing-the-asciidoctor-ruby-gem)
+- For Debian and Ubuntu
+```sh
+sudo apt-get install asciidoctor
+```
+- Generate html document
+```sh
+asciidoctor Report.adoc
+```
+- This will generate a Report.html file which can be opened using a browser.
