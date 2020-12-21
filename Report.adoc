@@ -3,7 +3,7 @@ Doc Writer <apanjain3@gmail.com>
 
 == Agenda
 
-- To create an internship contract using Accord Project, which is flexible and can be used as a basis to automate our internship monitoring process.
+- To create an internship contract using https://accordproject.org/[Accord Project], which is flexible and can be used as a basis to automate our internship monitoring process.
 
 - To check the Accord Project’s limitations and see if we can use it as a basis for creating usable contracts.
 
@@ -11,7 +11,7 @@ Doc Writer <apanjain3@gmail.com>
 
 Accord Project is an open source project which can be used to create smart legal contracts.
 
-The project has its own set of templating, modelling, and programming languages namely template-mark, concerto, and ergo.
+The project has its own set of templating, modelling, and programming languages namely https://accordproject.org/projects/cicero/[template-mark], https://accordproject.org/projects/concerto[concerto], and https://accordproject.org/projects/ergo[ergo].
 All three work together to generate and execute a contract.
 
 
@@ -25,7 +25,7 @@ The contract contains the following clauses.
 . Proprietary Information Clause
 . Offer Expiration Clause
 
-On the logic part there are no functions as the basic requirements of the project are not fulfilled.
+On the logic part there are no functions as the basic requirements for the project are not fulfilled.
 
 
 // Add a diagram to explain the structure using mermaid-js
@@ -46,26 +46,26 @@ The project was built in several steps.
 
 - There can be a list of various things which can be required to be iterated over while drafting a contract using external data.  This was done using list and join blocks.
 
-- The contract was then further broken down into clauses, these clauses need to be separated and reused, but there is no provision for that in accord.
+- The contract was then further broken down into clauses, these clauses need to be separated in different directories and reused (import into contracts), but there is no provision for that in accord.
 
 
 == Issues faced
 
 === No inbuilt validations for existing models
 
-One of the main models required here was the person model, which was present in the model library already but lacked validation of fields such as email and mobile. It’s expected from a DSL that it provides a complete set of tools so that users can implement it easily.
+One of the main models required here was the https://models.accordproject.org/person.html[person] model, which was present in the model library already but lacked validation of fields such as email and mobile. It’s expected from a DSL that it provides a complete set of tools so that users can implement it easily.
 
 Though concerto provides us with several parameters for a field in models, including regex and range, which can be used to validate fields. And that’s how I’ve implemented validation.
 
-The model library should be updated to accommodate these small things.
+The https://models.accordproject.org/[model library] should be updated to accommodate these small things.
 
 === Working with list inside a clause
 
-The clause block allows us to separate different parts of the contract. However, we face issues with other blocks when used inside the clause block. One such issue I encountered is that olist doesn’t parse the parameters of an array properly inside the clause block. It’s working fine outside.
+The clause block allows us to separate different parts of the contract. However, we face issues with other blocks when used inside the clause block. One such issue I encountered is that https://docs.accordproject.org/docs/markup-templatemark.html#ordered-lists[olist] doesn’t parse the parameters of an array properly inside the clause block. It’s working fine outside.
 
-Join block can also be used to iterate over list but it results in malformatted text.
+https://docs.accordproject.org/docs/markup-templatemark.html#join-blocks[Join] block can also be used to iterate over list but it results in malformatted text.
 
-There is also a foreach function which does the job, but again it has very limited formatting options.
+There is also a https://docs.accordproject.org/docs/markup-templatemark.html#iterators[foreach] function which does the job, but again it has very limited formatting options.
 
 I had to write hardcoded values for accessing items using their index.
 
@@ -73,7 +73,7 @@ I had to write hardcoded values for accessing items using their index.
 
 Debugging is one of the very important things while working on any program. The error messages should help in identifying the source of error, but this is not the case here. These messages are not very descriptive and one can even have to spend an hour or two to check where it is coming from.
 
-There also seems to be no method for logging values, one workaround is that we have to send it as a response while we trigger a clause on contract.
+There also seems to be no method for logging values, one workaround is that we can send these values as response while we trigger a clause on the contract.
 
 === Lack of documentation
 
