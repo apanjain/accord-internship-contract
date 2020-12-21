@@ -1,6 +1,5 @@
 = Report on Accord Internship Contract
 Doc Writer <apanjain3@gmail.com>
-:homepage: https://apanjain.dev
 
 == Agenda
 
@@ -41,20 +40,20 @@ Check the extent of automation possible.
 
 The project was built in several steps.
 
-First a draft of a sample contract was prepared.
+- First a draft of a sample contract was prepared.
 
-Then variables were declared for specific values inside the contract. Most of them were already available, but some of them had to be custom built.
+- Then variables were declared for specific values inside the contract. Most of them were already available, but some of them had to be custom built.
 
-There can be a list of various things which can be required to be iterated over while drafting a contract using external data.  This was done using list and join blocks.
+- There can be a list of various things which can be required to be iterated over while drafting a contract using external data.  This was done using list and join blocks.
 
-The contract was then further broken down into clauses, these clauses need to be separated and reused, but there is no such provision for that in accord.
+- The contract was then further broken down into clauses, these clauses need to be separated and reused, but there is no provision for that in accord.
 
 
 == Issues faced
 
 === No inbuilt validations for existing models
 
-One of the main models required here was the personCheck the limitations of the projectReusing clauses. model, which was present in the model library already but lacked validation of fields such as email and mobile. It’s expected from a DSL that it provides a complete set of tools so that users can implement it easily.
+One of the main models required here was the person model, which was present in the model library already but lacked validation of fields such as email and mobile. It’s expected from a DSL that it provides a complete set of tools so that users can implement it easily.
 
 Though concerto provides us with several parameters for a field in models, including regex and range, which can be used to validate fields. And that’s how I’ve implemented validation.
 
@@ -88,7 +87,7 @@ The current version of accord does not allow us to separate clause text and reus
 
 == Conclusion
 
-The Accord project is a good enough presentation of how a CLM should look like, but it lacks many key features. One of the many reasons is that it is written from scratch, even the programming and modelling languages. It will be a lot of iterations before it can be actually used in real CLM applications.
+The Accord project is a good enough representation of how a CLM should look like, but it lacks many key features. One of the many reasons is that it is written from scratch, even the programming and modelling languages. It will be a lot of iterations before it can be actually used in real CLM applications.
 
 Further, we can use some ideas from the accord project and implement in our app. But that’s all its potential right now.
 
