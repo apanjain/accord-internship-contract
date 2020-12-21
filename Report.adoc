@@ -1,0 +1,96 @@
+= Report on Accord Internship Contract
+Doc Writer <apanjain3@gmail.com>
+:homepage: https://apanjain.dev
+
+== Agenda
+
+- To create an internship contract using Accord Project, which is flexible and can be used as a basis to automate our internship monitoring process.
+
+- To check the Accord Project’s limitations and see if we can use it as a basis for creating usable contracts.
+
+== About Accord Project
+
+Accord Project is an open source project which can be used to create smart legal contracts.
+
+The project has its own set of templating, modelling, and programming languages namely template-mark, concerto, and ergo.
+All three work together to generate and execute a contract.
+
+
+== The Contract Structure
+
+The contract contains the following clauses.
+
+. Offer Clause
+. Cash Compensation Clause
+. Responsibilities Clause
+. Proprietary Information Clause
+. Offer Expiration Clause
+
+On the logic part there are no functions as the basic requirements of the project are not fulfilled.
+
+
+// Add a diagram to explain the structure using mermaid-js
+
+== Plan
+
+- To create a sample internship contract.
+- To check if we can create a separate clause library and import clauses from it directly into the template.
+Check the extent of automation possible.
+
+== Tasks Performed
+
+The project was built in several steps.
+
+First a draft of a sample contract was prepared.
+
+Then variables were declared for specific values inside the contract. Most of them were already available, but some of them had to be custom built.
+
+There can be a list of various things which can be required to be iterated over while drafting a contract using external data.  This was done using list and join blocks.
+
+The contract was then further broken down into clauses, these clauses need to be separated and reused, but there is no such provision for that in accord.
+
+
+== Issues faced
+
+=== No inbuilt validations for existing models
+
+One of the main models required here was the personCheck the limitations of the projectReusing clauses. model, which was present in the model library already but lacked validation of fields such as email and mobile. It’s expected from a DSL that it provides a complete set of tools so that users can implement it easily.
+
+Though concerto provides us with several parameters for a field in models, including regex and range, which can be used to validate fields. And that’s how I’ve implemented validation.
+
+The model library should be updated to accommodate these small things.
+
+=== Working with list inside a clause
+
+The clause block allows us to separate different parts of the contract. However, we face issues with other blocks when used inside the clause block. One such issue I encountered is that olist doesn’t parse the parameters of an array properly inside the clause block. It’s working fine outside.
+
+Join block can also be used to iterate over list but it results in malformatted text.
+
+There is also a foreach function which does the job, but again it has very limited formatting options.
+
+I had to write hardcoded values for accessing items using their index.
+
+=== Error Messages
+
+Debugging is one of the very important things while working on any program. The error messages should help in identifying the source of error, but this is not the case here. These messages are not very descriptive and one can even have to spend an hour or two to check where it is coming from.
+
+There also seems to be no method for logging values, one workaround is that we have to send it as a response while we trigger a clause on contract.
+
+=== Lack of documentation
+
+The documentation is very minimal. Examples are limited to just basic use cases. The parameters of each element should be described in detail.
+
+For some issues I had to even go through the source code, which didn’t help either.
+
+=== Reusing clauses
+
+The current version of accord does not allow us to separate clause text and reuse it in different contracts, which is a major problem, as the sole motive of this project is to minimize the effort required and automate this process as much as possible.
+
+== Conclusion
+
+The Accord project is a good enough presentation of how a CLM should look like, but it lacks many key features. One of the many reasons is that it is written from scratch, even the programming and modelling languages. It will be a lot of iterations before it can be actually used in real CLM applications.
+
+Further, we can use some ideas from the accord project and implement in our app. But that’s all its potential right now.
+
+
+
